@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Reflection;
 
 namespace CarLotSimulator
@@ -6,8 +6,10 @@ namespace CarLotSimulator
 	public class Car
 	{
         public Car()
-        {      
-
+        {
+            //Static Exercise
+            CarLot.numberOfCars++;
+            Console.WriteLine($"The number of cars added: {CarLot.numberOfCars}");
         }
 
         public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable)
@@ -18,6 +20,9 @@ namespace CarLotSimulator
             EngineNoise = engineNoise;
             HonkNoise = honkNoise;
             IsDriveable = isDriveable;
+
+            CarLot.numberOfCars++;
+            Console.WriteLine($"The number of cars added: {CarLot.numberOfCars}");
         }
 
         public int Year { get; set; }

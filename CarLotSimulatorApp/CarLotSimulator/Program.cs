@@ -35,8 +35,9 @@ namespace CarLotSimulator
             honda.IsDriveable = false;
 
             victoriasCarLot.ParkingList.Add(honda);
+          
 
-            //object initializer syntax 
+            ////object initializer syntax 
             var acura = new Car()
             {
                 Year = 2005,
@@ -47,6 +48,9 @@ namespace CarLotSimulator
                 IsDriveable = true,
 
             };
+           
+
+
 
             victoriasCarLot.ParkingList.Add(acura);
 
@@ -64,14 +68,37 @@ namespace CarLotSimulator
             victoriasCarLot.ParkingList.Add(lexus);
 
             //Custom Constructer
-            var fourthCar = new Car(2010, "Toyota", "RAV4", "buzz", "roar", true);
+            var toyota = new Car()
+            {
+                Year = 2010,
+                Make = "Toyota",
+                Model = "RAV4",
+                EngineNoise = "buzz",
+                HonkNoise = "roar",
+                IsDriveable = true
+            };
 
-            victoriasCarLot.ParkingList.Add(fourthCar);
+            victoriasCarLot.ParkingList.Add(toyota);
+            
 
+
+            //Adding more cars for static exercise
+            var bmw = new Car (2016, "BMW", "X5", "PURRR Vibrateeee~", "HONK BLARRRR", true);
+            
+            victoriasCarLot.ParkingList.Add(bmw);
+          
+
+            var astonMartin = new Car(1964, "Aston Martin", "DB5", "hummm", "Deep Honk", true);
+            victoriasCarLot.ParkingList.Add(astonMartin);
+        
+
+            var vw = new Car ( 1971, "VW", "Beetle", "crank pop", "toot toot", false );
+            victoriasCarLot.ParkingList.Add(vw);
+            
 
 
             //Call each of the methods for each car
-                     
+
 
 
             //*************BONUS*************//
@@ -87,6 +114,8 @@ namespace CarLotSimulator
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
 
+
+
             foreach (var car in victoriasCarLot.ParkingList)
             {
                 Console.WriteLine($"Year:{car.Year}");
@@ -95,9 +124,12 @@ namespace CarLotSimulator
 
                 car.MakeEngineNoise(car.EngineNoise);
                 car.MakeHonkNoise(car.HonkNoise);
+
+             
+
             }
 
-            
+
 
 
         }

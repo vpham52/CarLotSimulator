@@ -7,10 +7,19 @@ namespace CarLotSimulator
 	{
 		public CarLot()
 		{
+			
 		}
 
-		public List<Car> ParkingList { get; set; } = new List<Car>();
+        public static int numberOfCars;
 
+        public List<Car> ParkingList { get; set; } = new List<Car>();
+
+		
+
+
+		
+
+		
 			
 	}
 }
